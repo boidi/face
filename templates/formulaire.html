@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <html lang="en" dir="ltr">
+    <title>Search form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+ integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+<head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/addDataToDb">Add Data</a>
+        </li>
+              <li class="nav-item">
+          <a class="nav-link" href="#">#</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="row">
+  <p class ="col-sm-3 col-sm-offset-3 title">Search form</p>
+</div>
+<div class ="row">
+ <form action ="/" method="POST">
+  <div class="form-row col-md-6 col-md-offset-3" >
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Full name</label>
+      <input name="full_name" type="text" class="form-control" id="inputEmail4" placeholder="fullname">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4">mother's name</label>
+      <input type="text" class="form-control" id="mName" placeholder="mother name">
+    </div>
+
+  <div class="form-group col-md-4">
+    <label for="inputAddress">father name</label>
+    <input type="text" class="form-control" id="father" placeholder="name of father">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="gender">Gender</label>
+    <select class="form-control" id="genre">
+     <option selected >Male</option>
+     <option>Female</option>
+     </select>
+  </div>
+  <!--<div class="form-row"> -->
+    <div class="form-group col-md-4">
+      <label for="inputCity">Age</label>
+      <input type="number" class="form-control" id="age">
+    </div>
+
+    <!--
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div> -->
+
+
+  <div class="form-group">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-default">Analyse</button>
+
+    </div>
+  </div>
+
+
+</form> </div>
+</div>
+<div class="row">
+<p class="col-md-6 col-md-offset-3">resultat de la recherhe </p>
+  <table>
+    <thead><!-- en-tête -->
+<tr>
+
+<td>item</td>
+</tr>
+    </thead>
+    <tbody>
+    {% for  item  in data %}
+      <tr>
+      <td >{{item}} </td>
+      <!--<form method="post" action="/commentaire/positif/{{id_text}}">-->
+
+         
+
+   </tr>
+{% endfor %}
+
+ </tbody>
+    <tfoot>
+    </tfoot>
+
+</table>
+</div>
+</body>
+</html>

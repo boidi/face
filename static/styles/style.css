@@ -1,0 +1,63 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f7fa;
+}
+
+ 
+
+
+/*****************************************
+form search
+******************************************/
+
+
+.form-row{
+margin-left:200px;
+margin-right:300px}
+table,th,td{
+border:1px solid black ;
+margin-top:100px;
+}
+table{
+width:80%;
+margin-left:100px;
+
+}
+.actions,td{
+width:50px;
+text-align:center}
+
+/*****************************************
+Nav bar
+******************************************/
+.navbar {
+    height: 80px;
+    box-shadow: 0 2px 5px 0 #ccd2db;
+}
+
+#mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #00a4a7;
+}
+
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    color: white;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 15px;
+}
