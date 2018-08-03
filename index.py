@@ -28,6 +28,17 @@ def index():
         res1 = search_data(str(res[0]), str(res[1]), str(res[2]))
         return render_template('formulaire.html',data=result, query_result=res1, has_res1=True)
 
+
+
+@app.route('/addDataToDb', methods=['GET', 'POST'])
+def addData():
+
+    if request.method == 'POST':
+        a = add_data()
+        return a 
+    
+    return render_template('addData.html')
+
         
         
         
